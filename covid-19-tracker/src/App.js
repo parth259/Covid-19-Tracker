@@ -82,9 +82,9 @@ const App = () => {
               value={country}
               onChange={onCountryChange}
             >
-              <MenuItem value="worldwide">Worldwide</MenuItem>
+              <MenuItem value="worldwide"><strong>Worldwide</strong></MenuItem>
               {countries.map((country) => (
-                <MenuItem value={country.value}>{country.name}</MenuItem>
+                <MenuItem value={country.value}><strong>{country.name}</strong></MenuItem>
               ))}
             </Select>
           </FormControl>
@@ -124,9 +124,9 @@ const App = () => {
       <Card className="app__right">
         <CardContent>
           <div className="app__information">
-            <h3>Live Cases by Country</h3>
+            <h3><strong>Live Cases by Country</strong></h3>
             <Table countries={tableData} />
-            <h3>Worldwide New {casesType}</h3>
+            <h3><strong>Worldwide New {casesType}</strong></h3>
             <LineGraph casesType={casesType} />
           </div>
         </CardContent>
