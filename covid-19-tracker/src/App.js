@@ -14,6 +14,7 @@ import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
+import Vaccination from "./Vaccination"
 
 const App = () => {
   const [country, setInputCountry] = useState("worldwide");
@@ -128,6 +129,13 @@ const App = () => {
             <Table countries={tableData} />
             <h3><strong>Worldwide New {casesType}</strong></h3>
             <LineGraph casesType={casesType} />
+          </div>
+        </CardContent>
+      </Card>
+      <Card className="app__right">
+        <CardContent>
+          <div className="app__information">
+            <h3><strong>Vaccination data by Country</strong></h3>
           </div>
         </CardContent>
       </Card>
